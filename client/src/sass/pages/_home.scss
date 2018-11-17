@@ -1,13 +1,22 @@
 .home {
 
   &__parallax {
-    background-image: url("https://i.gse.io/gse_media/117/3/1492377915-Palace-of-Fine-Arts-Theatre-tickets.jpg?p=1public/images/palace-1.jpg");
+    background-image:linear-gradient(to bottom right, rgba($color-primary-light, .3), rgba($color-primary-dark, .3)), url("https://i.gse.io/gse_media/117/3/1492377915-Palace-of-Fine-Arts-Theatre-tickets.jpg?p=1public/images/palace-1.jpg");
     position: fixed;
+    top: 0;
+    z-index: -1;
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
     height: 100vh;
     width: 100vw;
   }
+
+  &__heading{
+    &--main {
+      margin-top: 10rem;
+      animation: fade-in ease-out 2s;
+    }
   }
+}
 

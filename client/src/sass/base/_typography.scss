@@ -10,3 +10,19 @@ h6 {
 p {
   font-family: $font-text;
 }
+
+.heading {
+
+  &--main {
+    font-size: 5rem;
+    letter-spacing: 1rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $font-decorative;
+    text-shadow: -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+  }
+}
