@@ -12,7 +12,11 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="home"></div>
+      <div className="home">
+        <div className="home__parallax"></div>
+      </div>
     )
   }
 }
+
+export default Home;
