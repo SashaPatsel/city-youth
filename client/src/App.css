@@ -1,32 +1,44 @@
-.App {
-  text-align: center;
-}
+/*
+0 - 600px: Phone
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
+600px - 900px: Tablet-Portrait
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+900px - 1200 px: Tablet-Landscape
 
-.App-link {
-  color: #61dafb;
-}
+[1200px - 1800px]: Normal styling
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+1800px + : Large desktop
+
+Good working order: Base & Typography -> General Layout & Grid -> Page Layout -> Components
+
+*/
+/* Reset CSS for cross-browser compatibility */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* allows other elements to inherit box-sizing specified in body */
+  box-sizing: inherit; }
+
+html {
+  /* this makes it a lot easier to calcute rem. 62.5 is 10/16 so our defualt fontsize is relative to user settings. defines what 1 rem is */
+  scroll-behavior: smooth;
+  font-size: 62.5%; }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  /* makes it so that padding and width don't add to total size of element. i.e. height and width will now extend to define other parts of the box model */
+  box-sizing: border-box; }
+
+::selection {
+  background-color: #bf3a32;
+  color: white; }
